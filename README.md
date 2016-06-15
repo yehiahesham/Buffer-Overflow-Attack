@@ -3,11 +3,11 @@ Using a vulnerable insecure program to demonstrate Buffer Overflow Attack to acq
 
  
 
-                                                    The American University in Cairo
-                                                     
-                                                    CSCE 448 - Secure System Engineering
-                                                     
-                                                    Spring 2016
+                                                  The American University in Cairo
+                                                   
+                                                 CSCE 448 - Secure System Engineering
+                                                   
+                                                          Spring 2016
                                                      
  
 
@@ -27,11 +27,11 @@ The Vulnerable code is named main.c and its output file is named also main.
 
 Then after that I implemented the attack via two methods also. The first was calling the method execelp  with given parameters as (main, main, buffer , NULL) ,  buffer is the injectable string I discussed in the beginning. The second way is as simple as printing the buffer and give the output string as input to the main as ./main $(./virus_print). Which lead to the same behavior.
 
-As for the randomizing memory addressing, I used the memory address when the randomizing if off and then wrote a shell script file to loop on the same address trying to capture the same memory location used in the code. Then I turned on the randomizing, and then run my shell script. The loop keeps trying till it gets a hit and successfully opens a shell, after a few misses. This takes less than a minute to get the same memory location and initiate a shell , so it is really fine with that brute force algorithm.
+As for the randomizing memory addressing, I used the memory address when the randomizing if off and then wrote a shell script file to loop on the same address trying to capture the same memory location used in the code. Then I turned on the randomizing, and then run my shell script. The loop keeps trying till it gets a hit and successfully opens a shell, after a few misses. This takes less than a minute to get the same memory location and initiate a shell, because the randomizayion is only done to the last  , so it is really fine with that brute force algorithm. 
 
 Shell scripts named shell.sh and shell_print.sh . Both need sudo to successfully initiate the shell terminal.
 
 Screenshots:
-
+![alt tag]()
 
 as shown above , after multiple trials, a shell is opened and we can execute any type of command we want like pwd and ps which shows that the there is a new shell in the process.
