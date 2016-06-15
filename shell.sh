@@ -1,0 +1,4 @@
+while :
+do
+	./vir
+done
